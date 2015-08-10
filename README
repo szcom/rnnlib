@@ -1,6 +1,6 @@
 # Origin
 
-The original RNNLIB is hosted at http://sourceforge.net/projects/rnnlib
+The original RNNLIB is hosted at http://sourceforge.net/projects/rnnl
 while this "fork" is created in pursuite of repeating results for the 
 online handwriting prediction and synthesis reported in 
 http://arxiv.org/abs/1308.0850. The later by now is Alex Graves's classic 
