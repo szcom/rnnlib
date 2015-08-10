@@ -1,0 +1,24 @@
+This directory provides example experiments that can be run with RNNLIB. 
+To run the experiments, the RNNLIB/utilities directory must be added to your pythonpath, and the following python packages must be installed:
+
+- SciPy
+- ScientificPython (NOT Scipy)
+- PIL
+ 
+In each subdirectory type 
+
+./build_netcdf
+
+to build the netcdf datasets, then
+
+rnnlib <TASK>.config
+
+to run the experiments. 
+
+Note that some directories may contain more than 1 config file, since different tasks may be defined for the same data.
+
+The experimental results will not correspond to published results, because only a fraction of the complete dataset is used in each case (to keep the size of the distribution down). 
+In addition, early stopping is not used, because no validation files are created. 
+However the same scripts can be used to build realistic experiments, given more data.
+
+If you want to adapt the python scripts to create netcdf files for your own experiments, a useful tutorial on using netcdf with python is available at http://gfesuite.noaa.gov/developer/netCDFPythonInterface.html

@@ -1,0 +1,68 @@
+      SUMMARY OF THE HDF5 CONFIGURATION
+      =================================
+
+General Information:
+-------------------
+                   HDF5 Version: 1.9.178
+                  Configured on: 
+                  Configured by: Unix Makefiles
+                 Configure mode: CMAKE 2.8.12.2
+                    Host system: Linux-3.13.0-24-generic
+              Uname information: Linux
+                       Byte sex: little-endian
+                      Libraries: 
+             Installation point: /home/sz/deep/rnnlib_openblas/install
+
+Compiling Options:
+------------------
+               Compilation Mode: 
+                     C Compiler: /usr/bin/cc
+                         CFLAGS:   -std=c99 -fomit-frame-pointer -finline-functions -fno-common -Wextra -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wnested-externs -Winline -fmessage-length=0
+                      H5_CFLAGS: 
+                      AM_CFLAGS: 
+                       CPPFLAGS: 
+                    H5_CPPFLAGS: 
+                    AM_CPPFLAGS: 
+               Shared Libraries: NO
+               Static Libraries: YES
+  Statically Linked Executables: OFF
+                        LDFLAGS:  
+                     AM_LDFLAGS: 
+                Extra libraries: m;dl
+                       Archiver: /usr/bin/ar
+                         Ranlib: /usr/bin/ranlib
+              Debugged Packages: 
+                    API Tracing: OFF
+
+Languages:
+----------
+                        Fortran: OFF
+               Fortran Compiler: 
+          Fortran 2003 Compiler: 
+                  Fortran Flags: 
+               H5 Fortran Flags: 
+               AM Fortran Flags: 
+                            C++: OFF
+                   C++ Compiler: /usr/bin/c++
+                      C++ Flags:   -fomit-frame-pointer -finline-functions -fno-common -fmessage-length=0
+                   H5 C++ Flags: 
+                   AM C++ Flags: 
+
+Features:
+---------
+                  Parallel HDF5: OFF
+             High Level library: ON
+                   Threadsafety: 
+            Default API Mapping: v110
+ With Deprecated Public Symbols: ON
+         I/O filters (external): 
+         I/O filters (internal):  SHUFFLE FLETCHER32 NBIT SCALEOFFSET
+                            MPE: 
+                     Direct VFD: 1
+                        dmalloc: 
+Clear file buffers before write: ON
+           Using memory checker: OFF
+         Function Stack Tracing: OFF
+      Strict File Format Checks: OFF
+   Optimization Instrumentation: 
+       Large File Support (LFS): ON

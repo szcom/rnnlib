@@ -1,0 +1,6 @@
+lineStrokes/p08/p08-012/p08-012z-05.xml
+lineStrokes/a06/a06-405/a06-405z-01.xml
+lineStrokes/h09/h09-351/h09-351z-02.xml
+lineStrokes/k10/k10-058/k10-058z-01.xml
+lineStrokes/h09/h09-370/h09-370z-06.xml
+

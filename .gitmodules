@@ -1,0 +1,17 @@
+[submodule "boost"]
+	path = boost
+	url = https://github.com/ned14/boost-trunk
+	ignore = untracked
+[submodule "openblas"]
+	path = openblas
+	url = git://github.com/xianyi/OpenBLAS.git
+	ignore = untracked
+[submodule "netcdf-c"]
+	path = netcdf-c
+	url = https://github.com/Unidata/netcdf-c.git
+	ignore = untracked
+[submodule "hdf5"]
+	path = hdf5
+	url = git@github.com:nschloe/hdf5.git
+	ignore = untracked
+	ignore = dirty

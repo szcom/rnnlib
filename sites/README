@@ -1,0 +1,4 @@
+Set the CONFIG_SITE environment variable to the location of the site script, e.g.:
+./configure CONFIG_SITE=./sites/config.site-all-static
+
+Alternatively copy the site script to 'prefix/share/config.site' or 'prefix/etc/config.site' and run the 'configure' script.

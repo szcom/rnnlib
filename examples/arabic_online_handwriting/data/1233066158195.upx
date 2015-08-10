@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<UpxType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://unipen.nici.ru.nl/upx" schemaVersion="0.9.5">
+  <datasetInfo name="ADAB : Online Handwriting Arabic Database" contact="mahdi.hamdani@ieee.org">
+    <dataInfo style="cursive"/>
+  </datasetInfo>
+  <datasetDefs>
+    <writerDefs>
+      <writer id="id1233065273176">
+        <personal hand="right" educationLevel="high school" gender="female" region="Sfax" age="P23Y"/>
+        <skillDevice value="Good" deviceType="Tablet PC"/>
+      </writer>
+    </writerDefs>
+    <labelSrcDefs>
+      <labelSrc name="Undefined" desc="The label is not yet defined" id="labelsrc01"/>
+      <labelSrc name="Recognizer" desc="A recognizer for arabic handwriting" id="labelsrc02"/>
+      <labelSrc name="Human" desc="The label is verified by a human" id="labelsrc03"/>
+    </labelSrcDefs>
+  </datasetDefs>
+  <hwData desc="">
+    <hLevel level="Word" writerRef="id1233065273176">
+      <label labelSrcRef="UNDEFINED" labelType="IFN/ENIT" timestamp="1233066158195">
+        <alternate value="&#x635;&#x627;&#x62d;&#x628; &#x627;&#x644;&#x62c;&#x628;&#x644;"/>
+      </label>
+      <hwTraces>
+        <traceView traceRef="1233066158195.inkml"/>
+      </hwTraces>
+    </hLevel>
+    <imgInfo imgSrc="1233066158195.tif"/>
+  </hwData>
+</UpxType>

@@ -1,0 +1,23 @@
+test -z "$CC" && CC=gcc
+test -z "$CXX" && CXX=g++
+test -z "$CFLAGS" && CFLAGS="-Wall -Wno-sign-compare -Wno-unused-function -funroll-loops -march=native -g -O3 -ftree-vectorize -msse3 -msse4.1 -msse4.2 -mssse3"
+test -z "$CXXFLAGS" && CXXFLAGS="${CFLAGS}"
+test -z "$CPPFLAGS" && CPPFLAGS="-I/usr/local/include"
+test -z "$LDFLAGS" && LDFLAGS="-L/usr/local/lib"
+# Use only static libraries
+#
+# In principle it suffices to use LDFLAGS=-all-static and
+# libtool will do the job. For example:
+# test -z "$LDFLAGS" && LDFLAGS="-L$HOME/usr/lib -all-static"
+#
+# But 'configure' will most likely fail soon, before libtool
+# is even involved --- the compiler will see -all-static and
+# it will quit with an error because it does not recognize
+# this flag. If this is the case, do not use LDFLAGS=-all-static
+# with 'configure'. Instead, use LDFLAGS=-all-static with
+# make only:
+# make LDFLAGS=-all-static
+#
+# If this does not work either, try:
+# configure LDFLAGS=-static
+# make LDFLAGS=-all-static

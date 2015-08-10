@@ -1,0 +1,6 @@
+test -z "$CC" && CC=gcc
+test -z "$CXX" && CXX=g++
+test -z "$CFLAGS" && CFLAGS="-Wall -Wno-sign-compare -Wno-unused-function -funroll-loops -march=native -g -O3 -ftree-vectorize -msse3 -msse4.1 -msse4.2 -mssse3"
+test -z "$CXXFLAGS" && CXXFLAGS="${CFLAGS}"
+test -z "$CPPFLAGS" && CPPFLAGS="-I/usr/local/include"
+test -z "$LDFLAGS" && LDFLAGS="-L/usr/local/lib"

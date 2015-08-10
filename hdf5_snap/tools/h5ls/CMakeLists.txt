@@ -1,0 +1,47 @@
+cmake_minimum_required (VERSION 2.8.11)
+PROJECT (HDF5_TOOLS_H5LS)
+
+#-----------------------------------------------------------------------------
+# Setup include Directories
+#-----------------------------------------------------------------------------
+INCLUDE_DIRECTORIES (${HDF5_TOOLS_SRC_DIR}/lib)
+
+#-----------------------------------------------------------------------------
+# Add the h5ls executable
+#-----------------------------------------------------------------------------
+add_executable (h5ls ${HDF5_TOOLS_H5LS_SOURCE_DIR}/h5ls.c)
+TARGET_NAMING (h5ls ${LIB_TYPE})
+TARGET_C_PROPERTIES (h5ls " " " ")
+target_link_libraries (h5ls  ${HDF5_TOOLS_LIB_TARGET} ${HDF5_LIB_TARGET})
+set_target_properties (h5ls PROPERTIES FOLDER tools)
+
+set (H5_DEP_EXECUTABLES
+    h5ls
+)
+
+if (BUILD_TESTING)
+
+  include (CMakeTests.cmake)
+
+endif (BUILD_TESTING)
+
+##############################################################################
+##############################################################################
+###           I N S T A L L A T I O N                                      ###
+##############################################################################
+##############################################################################
+
+#-----------------------------------------------------------------------------
+# Rules for Installation of tools using make Install target
+#-----------------------------------------------------------------------------
+
+#INSTALL_PROGRAM_PDB (h5ls ${HDF5_INSTALL_BIN_DIR} toolsapplications)
+
+install (
+    TARGETS
+        h5ls
+    RUNTIME DESTINATION
+        ${HDF5_INSTALL_BIN_DIR}
+    COMPONENT
+        toolsapplications
+)

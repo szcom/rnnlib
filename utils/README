@@ -1,0 +1,19 @@
+The script files in this directory provide a range of auxiliary tools for RNNLIB. 
+In order for these to work, the directory containing the ‘rnnlib’ binary must be added to your path. 
+The ‘utilities’ directory must be added to your pythonpath for the experiments in the ‘examples’ directory to work. 
+The most important utilities are:
+
+- dump_sequence_variables.sh: writes to file all the internal variables (activations, delta terms etc.) of the network while processing a single sequence
+- plot_variables.py: plots a single variable file saved with 'dump_sequence_variables'
+- plot_errors.sh: plots the error curves written to a log file during training
+- normalise_inputs.sh: adjusts the inputs of one or more netcdf files to have mean 0, standard deviation 1 (relative to the first file, which should be used for training)
+- gradient_check.sh: numerically checks if the network's backward pass correctly calculates the gradient
+ 
+All files should provide a list of arguments if called with no arguments.
+The python scripts will give a list of optional arguments, defaults etc. if called with the single argument '-h'.
+The following python libraries are required for some of the scripts:
+ 
+- SciPy (all scripts)
+- Pylab (all plotting/visualisation scripts)
+- PIL (plot_variables.py)
+- ScientificPython (NOT scipy; for normalise_inputs.sh)
