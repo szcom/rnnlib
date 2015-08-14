@@ -1,7 +1,7 @@
 # Origin
 
 The original RNNLIB is hosted at http://sourceforge.net/projects/rnnl
-while this "fork" is created in pursuite of repeating results for the 
+while this "fork" is created to repeat results for the 
 online handwriting prediction and synthesis reported in 
 http://arxiv.org/abs/1308.0850. The later by now is Alex Graves's classic 
 paper on LSTM networks showing of what RNN can learn about the
@@ -132,3 +132,8 @@ there are few things added:
 * mixtures=N where N is number of gaussians in the output layer
 * charWindowSize=N where N is the number of gaussians in the character window layer
 * skipConnections=true|false - whether to add skip connections; default is true
+
+# Contact
+
+Please create github issues to discuss the problems
+
