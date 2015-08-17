@@ -17,6 +17,10 @@ Building rnnlib requires the following:
 * C++11 compiler
 * fortran for building OpenBLAS
 * cmake
+* libcurl
+* automake
+* libtool
+* texinfo
 
 In addition, the following python packages are needed for the auxiliary scripts in the 'utils' directory:
 
