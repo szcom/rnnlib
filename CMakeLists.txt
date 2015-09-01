@@ -72,7 +72,6 @@ IF(NOT netcdfcxx_LIB)
            set ( ENV{CXXFLAGS} "-I${CMAKE_SOURCE_DIR}/install/include -std=c++11 -stdlib=libc++" )
        ENDIF()
        set ( ENV{CFLAGS} "-I${CMAKE_SOURCE_DIR}/install/include" )
-       set ( ENV{LDFLAGS} "${netcdf_LIB}" )
        execute_process ( COMMAND ./configure   --disable-shared --prefix=${CMAKE_SOURCE_DIR}/install
                        WORKING_DIRECTORY netcdf-cxx )
 
