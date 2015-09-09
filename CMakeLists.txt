@@ -1,6 +1,11 @@
 cmake_minimum_required (VERSION 2.6)
 project (rnnlib)
 
+IF(CMAKE_VERSION VERSION_EQUAL "3.0.0" OR
+       CMAKE_VERSION VERSION_GREATER "3.0.0")
+     CMAKE_POLICY(SET CMP0045 OLD)
+ENDIF()
+
 execute_process ( COMMAND git submodule update --init boost )
 
 SET ( PREFER_MKL "FALSE" CACHE BOOLEAN "Whether to link against Intel's MKL or OpenBlas" )
