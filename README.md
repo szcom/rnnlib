@@ -7,7 +7,6 @@ http://arxiv.org/abs/1308.0850. The later by now is Alex Graves's classic
 paper on LSTM networks showing of what RNN can learn about the
 structure present in the sequential input.
 
-The copy of this software runs on http://www.inkposter.com
 
 
 # Building
