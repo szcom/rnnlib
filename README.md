@@ -52,10 +52,14 @@ training data, train the model and eventually plot the results of the synthesis
 
 ## Downloading online handwriting dataset
 
-Start by registering and downloading pen strokes data from 
-http://www.iam.unibe.ch/~fkiwww/iamondb/data/lineStrokes-all.tar.gz
+The database is hosted on
+http://www.fki.inf.unibe.ch/databases/iam-handwriting-database
+Start by registering here
+http://www.fki.inf.unibe.ch/DBs/iamDB/iLogin/index.php
+and downloading pen strokes data from 
+http://www.fki.inf.unibe.ch/DBs/iamOnDB/data/lineStrokes-all.tar.gz
 Text lables for strokes can be found here
-http://www.iam.unibe.ch/~fkiwww/iamondb/data/ascii-all.tar.gz
+http://www.fki.inf.unibe.ch/DBs/iamOnDB/data/ascii-all.tar.gz
 Then unzip ./lineStrokes and ./ascii under examples/online_prediction.
 Data format in the downloaded files can not be used as is 
 and requires further preprocessing to convert pen coordinates to offsets from
