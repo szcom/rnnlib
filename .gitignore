@@ -37,3 +37,4 @@ gradient_check.build/
 Debug
 Release
 rnnlib.xcodeproj
+.idea

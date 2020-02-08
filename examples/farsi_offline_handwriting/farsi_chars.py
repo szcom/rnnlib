@@ -89,7 +89,7 @@ print len(labels), "labels:"
 print labels
 
 #create a new .nc file
-file = netcdf_helpers.NetCDFFile(ncFilename, 'w')
+file = netcdf_helpers.netcdf_file(ncFilename, 'w')
 
 #create the dimensions
 netcdf_helpers.createNcDim(file,'numSeqs',len(seqLengths))
