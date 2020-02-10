@@ -15,19 +15,18 @@
 # You should have received a copy of the GNU General Public License
 # along with RNNLIB.  If not, see <http://www.gnu.org/licenses/>.
 
-# from Scientific.IO.NetCDF import NetCDFFile
 import netCDF4
-from scipy.io.netcdf import netcdf_file
 import numpy as np
+from scipy.io.netcdf import netcdf_file
 
 
-def createNcDim(ncfile, name, d):
+def create_nc_dim(ncfile, name, d):
     print "creating netcdf dimension:", name, d
     ncfile.createDimension(name, d)
 
 
 # assumes ncfile will be written over (opened with 'w')
-def createNcVar(ncfile, vname, data, vtype, dims, desc):
+def create_nc_var(ncfile, vname, data, vtype, dims, desc):
     print "creating netcdf variable", vname
     nc_var = ncfile.createVariable(vname, vtype, dims)
     nc_var.longname = desc
@@ -35,31 +34,24 @@ def createNcVar(ncfile, vname, data, vtype, dims, desc):
         np_data = data
     else:
         np_data = np.asarray(data, dtype=nc_var.typecode() + str(nc_var.itemsize()))
-    assert nc_var.shape == np_data.shape  # TODO:remove
     nc_var[:] = np_data
-    print nc_var.shape
 
 
-def maxLen(strings):
-    maxLength = 0
+def max_len(strings):
+    max_length = 0
     for s in strings:
         length = len(s)
-        if (length > maxLength):
-            maxLength = length
-    return maxLength
+        if length > max_length:
+            max_length = length
+    return max_length
 
 
-def createNcStrings(ncfile, vname, strings, dims, desc):
-    str_length = maxLen(strings)
+def create_nc_strings(ncfile, vname, strings, dims, desc):
+    str_length = max_len(strings)
 
-    chars = np.empty((len(strings), str_length), dtype='S' + str(str_length))
-    [np.append(chars, netCDF4.stringtoarr(string, str_length, 'S')) for string in strings]
+    chars = np.zeros((len(strings), str_length), dtype='S1')
+    for i, string in enumerate(strings):
+        chars[i] = netCDF4.stringtoarr(string, str_length, 'S')
 
-    createNcDim(ncfile, dims[1], str_length)
-    createNcVar(ncfile, vname, np.array(chars), 'S1', dims, desc)
-
-# def	createNcString(ncfile,vname,string,dims,desc):
-# 	print "writing string",vname
-# 	nullString = string + '\0'
-# 	createNcDim(ncfile,dims[0],len(nullString))
-# 	createNcVar(ncfile,vname,nullString,'c',dims,desc)
+    create_nc_dim(ncfile, dims[1], str_length)
+    create_nc_var(ncfile, vname, np.array(chars), 'S1', dims, desc)

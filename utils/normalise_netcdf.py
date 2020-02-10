@@ -100,15 +100,15 @@ for p in range(len(inputStds)):
 outfile = netcdf_helpers.netcdf_file(outputFilename, 'w')
 
 for d in inputVar.dimensions:
-    netcdf_helpers.createNcDim(outfile, d, infile.dimensions[d])
+    netcdf_helpers.create_nc_dim(outfile, d, infile.dimensions[d])
 
 if options.stdMeanFilename == "":
-    netcdf_helpers.createNcVar(outfile, options.outputArrayName + 'Means', inputMeans, 'f', (inputVar.dimensions[1],),
-                               'input means')
-    netcdf_helpers.createNcVar(outfile, options.outputArrayName + 'Stds', inputStds, 'f', (inputVar.dimensions[1],),
-                               'input std deviations')
-netcdf_helpers.createNcVar(outfile, options.outputArrayName, outputArray, 'f', inputVar.dimensions,
-                           options.inputArrayName + ' adjusted for mean 0 and std dev 1')
+    netcdf_helpers.create_nc_var(outfile, options.outputArrayName + 'Means', inputMeans, 'f', (inputVar.dimensions[1],),
+                                 'input means')
+    netcdf_helpers.create_nc_var(outfile, options.outputArrayName + 'Stds', inputStds, 'f', (inputVar.dimensions[1],),
+                                 'input std deviations')
+netcdf_helpers.create_nc_var(outfile, options.outputArrayName, outputArray, 'f', inputVar.dimensions,
+                             options.inputArrayName + ' adjusted for mean 0 and std dev 1')
 
 infile.close()
 outfile.close()

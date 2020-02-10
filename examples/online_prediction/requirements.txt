@@ -2,5 +2,4 @@ cftime==1.0.4.2
 netCDF4==1.5.3
 numpy==1.16.6
 Pillow==6.2.2
-ScientificPython==2.9.4
 scipy==1.2.3
