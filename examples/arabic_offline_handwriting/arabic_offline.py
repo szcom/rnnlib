@@ -167,7 +167,7 @@ for filename in seqTags:
 		offset += 1
 
 #create a new .nc file
-file = netcdf_helpers.NetCDFFile(outputFilename, 'w')
+file = netcdf_helpers.netcdf_file(outputFilename, 'w')
 
 #create the dimensions
 netcdf_helpers.createNcDim(file,'numSeqs',len(seqLengths))
